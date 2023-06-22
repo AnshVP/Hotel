@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dash {
+            visibility: hidden;
+            border: 3px solid black;
+            width: 0%;
+            transition: 1s;
+        }
+
+        #navbar {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #navbar li {
+            padding: 10px;
+            font-size: large;
+        }
+
+        /* .hover{
+            position: absolute;
+        } */
+    </style>
+    <script src="/hotel/js.js">
+    </script>
+</head>
+
+<body>
+    <div id="navbar">
+        <ul>
+            <li class="hover" onmouseover="over(this,d1)" onmouseout="out(this,d1)">
+                Stay
+                <div id="d1" class="dash"></div>
+            </li>
+            <li class="hover" onmouseover="over(this,d2)" onmouseout="out(this,d2)">
+                Events
+                <div id="d2" class="dash"></div>
+            </li>
+            <li class="hover" onmouseover="over(this,d3)" onmouseout="out(this,d3)">
+                Wellness
+                <div id="d3" class="dash"></div>
+            </li>
+            <li class="hover" onmouseover="over(this,d4)" onmouseout="out(this,d4)">
+                Attractions
+                <div id="d4" class="dash"></div>
+            </li>
+        </ul>
+        <div onclick="opennav()" style="border: 2px solid red; height: 200px; width:30%;"></div>
+    </div>
+
+</body>
+
+</html>

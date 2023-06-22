@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta&family=Poppins&family=Roboto+Mono:wght@200&family=Sono:wght@200&family=Tilt+Neon&family=Ubuntu+Mono&display=swap');
+
+body{
+    height: 100%; 
+    background-color: rgb(228, 241, 250);
+}
+
+#bgdesign{
+    position: absolute;
+    z-index: -2; 
+    opacity:70%;
+}
+
+#navbar{
+    background-color:rgb(228, 241, 250);
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    border-bottom: 2px solid grey;
+}
+#navbar:hover{
+    background-color: white;
+}
+#navi{
+    margin: 0%;
+    margin-top: 3px;
+    padding: 6px;
+    display: flex;
+    list-style: none;
+}
+#navi>li{
+    cursor: pointer;
+    padding: 0px 30px;
+    font-size: large;
+    font-weight:600;
+    color: rgb(94, 163, 228);
+    font-family: 'Poppins', sans-serif;
+}
+.dash{
+    visibility:hidden;
+    border: 3px solid rgb(43, 117, 187);
+    width: 0%;
+    transition: 1s;
+}
+
+.dash:hover{
+    width:100%;
+} 
+
+.dropdown-menu{
+    position: relative;
+    width:600px;
+    animation-name: dropmenu;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    border: 3px solid rgb(78, 161, 243);
+    border-radius: 25%;
+    cursor: context-menu;
+    padding: 0px;
+    z-index: 3;
+    transition: 1s;
+}
+@keyframes dropmenu{
+    from{
+        top: 0%;
+    }
+    to{
+        top: 7%;
+    }
+}
+.bgimg{
+    border-radius: 25%;
+    height:200px;
+}
+
+.menu{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    position: absolute;
+}
+
+.menu .menu-item{
+    width:20%;
+    border-right: 2px solid blue;
+    margin: auto;
+    text-align: center; 
+    list-style: none;
+    padding: 15px;
+}
+.menu .menu-item li a{
+    padding: 5px;
+    color: rgb(50, 119, 197) ;
+    font-size: large; 
+    font-family: 'Sono', sans-serif;
+    text-decoration: none;
+}
+.menu .menu-info{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    font-family: 'Sono', sans-serif;
+    color: rgb(24, 105, 172);
+}
+.menu-info>div{
+    width:30%;
+    margin: auto;
+}
+
+.carousel-indicators{
+    z-index: 1;
+}
+
+#burger{
+    display: none;
+}
+
+#line1, #line2, #line3{
+    width: 25px;
+    height: 3px;
+    background-color:rgb(60, 145, 219);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+#burger:hover{
+    background-color: rgb(60, 145, 219);
+}
+#burger:hover #line1{
+    background-color:aliceblue;
+}
+#burger:hover #line2{
+    background-color:aliceblue;
+}
+#burger:hover #line3{
+    background-color:aliceblue;
+}
+
+#greet{
+    animation-name: display;
+    animation-duration: 3s;
+    color: rgb(22, 34, 141);
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    font-size: large;
+}
+#greet:hover{
+    color: aliceblue;
+    background-color: rgb(0, 119, 255);
+    transition: 1s;
+}
+@keyframes display{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+} 
+.amenities{
+    font-family: 'Sono', sans-serif;
+    text-align: center;
+    font-size: xx-large;
+    margin: 0px 60px;
+}
+.amenities-title{
+    font-weight:600;
+}
+.amenities-icons div{
+    padding:20px 80px;
+}
+.amenities-icons span{
+    font-size: medium;
+    display: none;
+    background-color: black;
+    border-radius: 20px;
+}
+.amenities-icons div:hover span{
+    display: block;
+    color: aliceblue;
+}
+.back-to-top{
+    position: fixed;
+    background-color:  rgb(77, 152, 206);
+    border: 0;
+    max-width: 60px;
+    top: 400px;
+    right: 0%;
+    z-index: 4;
+}
+.book{
+    position: fixed;
+    background-color:  rgb(77, 152, 206);
+    border: 0;
+    max-width: 40px;
+    top: 100px;
+    right: 0%;
+    z-index: 4;
+}
+#start-jrny, #finish-jrny{
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 26px;
+}
+#check-in, #check-out{
+    font-family: 'Sono', sans-serif;
+    text-align: center;
+    font-size: 35px;
+    margin: 0px 60px;
+}
+.modal-dialog{
+    background-color:rgb(77, 152, 206) ;
+}
+.room-title, .suite-title, .wed-title, .wed-info div, .travel-title{
+    opacity: 0%;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: x-large;
+    text-align: center;  
+}
+.title-animation{
+    animation-name: title;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#room1, #room2, #room3, #suite1, #suite2, #suite3{
+    display: none;
+}
+.desc-info{
+    text-align: center;
+    font-family: 'Sono', sans-serif;
+    font-weight: 600;
+    color: rgb(24, 105, 172);   
+}
+@keyframes show-desc{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 43%;
+    }  
+}
+@keyframes title{
+    from{
+        width: 0%;
+        opacity: 0%;
+    }
+    to{
+        width: 100%;
+        color: aliceblue;
+        font-family: 'Ubuntu Mono', monospace;
+        background-color: rgb(0, 119, 255);
+        opacity: 100%;
+    }   
+}
+.wed-info{
+    display: flex;
+}
+.wed-desc{
+    animation-name: information;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes information{
+    from{
+        width: 0%;
+        opacity: 0%;
+    }
+    to{
+        width: 100%;
+        color: aliceblue;
+        font-family: 'Ubuntu Mono', monospace;
+        background-color: rgb(31, 68, 189);
+        opacity: 90%;
+    }   
+}
+.travel-info{
+    position: relative;
+    display: flex;
+    margin: 50px;
+}
+.travel-intro{
+    position: absolute;
+    top: 100px;  
+    font-family: 'Ubuntu Mono', monospace; 
+    font-size: 70px; 
+    color: white; 
+    width: 90%;
+}
+.travel-desc{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Sono', sans-serif;
+    font-weight: 600;
+    color: rgb(24, 105, 172);  
+}
+.travel-desc div:first-child{
+    height: 400px;
+}
+@media only screen and (max-width:800px) {
+    .wed-info{
+        flex-direction: column;
+    }
+    .travel-desc div:first-child{
+        height: 430px;
+    }
+    .travel-intro{
+        font-size: 55px;
+    }
+}
+@media only screen and (max-width:600px) {
+    #navi{
+        position: fixed;
+        top: 36px;
+        left: -100%;
+        height: 100vh;
+        padding:10px 20px;
+        background:url("/hotel/background/bground5.jpg");
+        opacity: 97%;
+        transition: 1s;
+        display: block;
+        border-radius: 0 0 60% 0;
+    }
+    #navi>li{
+        padding: 15px;
+        color: rgb(60, 145, 230);
+    } 
+    #burger{
+        position: absolute;
+        border: 3px solid rgb(60, 145, 219);
+        border-radius: 6px;
+        top: 10px;
+        left: 0px;
+        cursor: pointer;
+        display:block;
+        margin-right: auto;
+        margin-left: 20px;
+    }  
+    .bgimg{
+        height:330px;
+    }
+    .toggle #line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      
+    .toggle #line2 {
+        opacity: 0;
+      }
+      
+    .toggle #line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .nav-active>li{
+        display: block;
+    }
+    .show{
+        animation-name: shownav;
+        animation-duration: 1s; 
+        animation-fill-mode: forwards;      
+    }
+
+    @keyframes shownav{
+        from{
+            left: -100%;
+        }
+        to{
+            left: 0;
+        }
+    }
+    .dropdown-menu{
+        max-width: 360px;
+        top:-200px;
+        animation-name: menumation;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes menumation {
+        from{
+           top: -200px;
+        }
+        to{         
+           top:-100px;
+           left: 10%;
+        }    
+    }
+    .menu{     
+        flex-direction: column;
+        height: 330px;
+    }  
+    .menu .menu-item{
+        width: 70%;
+        border-bottom: 2px solid blue;
+        border-right: 0ch;
+    }
+    .menu .menu-item li{
+        padding: 5px;
+    }
+    .menu .menu-info{
+        width: 80%;
+    }
+    .travel-intro{
+        font-size: 50px;
+    }
+    .travel-info{
+        margin: 0%;
+        display: block;
+    }
+    .travel-desc{
+        text-align: center;
+    }
+    .travel-desc div:first-child{
+        display: none;
+    }  
+    #start-jrny, #finish-jrny{
+        font-size: 15px;
+    }
+    #check-in, #check-out{
+        font-size: 25px;
+    }
+
+}
+
+footer{
+    margin-top: 35px;
+    /* height: 27vh; */
+    width: 100%;
+    background-color: rgb(93,154,228);
+}
+
+.footer-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    display: flex;
+    justify-content: flex-start!important;
+    align-items: flex-start !important;
+}
+
+/* Contact Details */
+.contact{
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    display: flex;
+    width: 50%;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h1{
+    margin: 11px 2px !important;
+    margin-bottom: 0px !important;
+    margin-top: 21px !important;
+}
+
+.contact div{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-details{
+    margin: 2px 3px;
+}
+
+.contact img{
+    filter: invert(100%);
+    width: 15%;
+}
+
+.contact p{
+    font-size: 17px;
+}
+/* Contact Details Ends */
+
+/* Connect Details */
+.connect{
+    /* border: 2px solid red; */
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.connect-img{
+    display: flex;
+    width: 54%;
+    /* border: 2px solid green; */
+    justify-content: space-evenly;
+    /* margin-left: -5px; */
+    margin-top: -10px;
+}
+
+.connect-img img{
+    filter: invert(100%);
+    width: 6%;
+    cursor: pointer;
+}
+/* Connect Details End */
+
+/* Brand Details */
+.brand-flex{
+    text-align: center;
+}
+
+.brand h1{
+    font-size: 38px;
+}
+
+.brand p{
+    font-size: 15px;
+    margin-bottom: 10px !important;
+}
+
+.brand h1, .brand p{
+    margin: 0;
+    color: white;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.connect h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.brand img{
+    width: 10%;
+}
+/* Brand Details End */
+/* Footer Ends */
